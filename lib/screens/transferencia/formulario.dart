@@ -7,10 +7,8 @@ const _tituloAppBar = 'Criando Transferência';
 
 const _rotuloCampoNumeroConta = 'Número da conta';
 const _dicaCampoNUmeroConta = '0000';
-
 const _rotuloCampoValor = 'Valor';
 const _dicaCampoValor = '00.00';
-
 const _textoBotaoConfirmar = 'Confirmar';
 
 class FormularioTransferencia extends StatelessWidget {
@@ -42,7 +40,7 @@ class FormularioTransferencia extends StatelessWidget {
   void _criaTransferencia(BuildContext context) {
     final int? numeroConta = int.tryParse(_controladorCampoNumeroConta.text);
     final double? valor = double.tryParse(_controladorCampoValor.text);
-    
+
     if(numeroConta != null && valor != null){
       final transferenciaCriada = Transferencia(valor, numeroConta);
       Navigator.pop(context, transferenciaCriada);
